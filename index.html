@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h2>Rock, paper, scissors</h2>
+    <p>SCORE:<span id="score"></span></p>
+    <hr>
+</header>
+<div class="choose">
+    <button class="game" id="rock"><img src="images/rock.png"></button>
+    <button class="game" id="paper"><img src="images/paper.png"></button>
+    <button class="game" id="scissors"><img src="images/scissors.png"></button>
+</div>
+<div id="results">
+    <p id="result"></p>
+</div>
+<script>
+    const rockbtn = document.getElementById("rock");
+    const paperbtn = document.querySelector("#paper");
+    const scissorsbtn = document.querySelector("#scissors");
+    var score = 0;
+    document.getElementById("score").innerHTML=score;
+
+    rockbtn.addEventListener('click', function(){
+        var a = Math.floor(Math.random() * 3);
+        if(a==1)
+        {
+            document.getElementById("result").innerHTML = "Rock DRAW!";
+            document.getElementById("score").innerHTML=score;
+        }
+        else if(a==2)
+        {
+            document.getElementById("result").innerHTML = "Paper YOU LOSE!";
+            if(score>0)
+            score=score-1;
+            document.getElementById("score").innerHTML = score;
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Scissors YOU WIN!";
+            score++;
+            document.getElementById("score").innerHTML=score;
+        }
+
+    });
+    paperbtn.addEventListener('click', function(){
+        var b = Math.floor(Math.random() * 3);
+        if(b==1)
+        {
+            document.getElementById("result").innerHTML = "Rock YOU WIN!";
+            score++;
+            document.getElementById("score").innerHTML=score;
+        }
+        else if(b==2)
+        {
+            document.getElementById("result").innerHTML = "Paper DRAW!";
+            document.getElementById("score").innerHTML = score;
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Scissors YOU LOSE!";
+            if(score>0)
+            score=score-1;
+            document.getElementById("score").innerHTML = score;
+        }
+        
+
+    });
+    scissorsbtn.addEventListener('click', function(){
+        var c = Math.floor(Math.random() * 3);
+        if(c==1)
+        {
+            document.getElementById("result").innerHTML = "Rock YOU LOSE!";
+            if(score>0)
+            score=score-1;
+            document.getElementById("score").innerHTML = score;
+        }
+        else if(c==2)
+        {
+            document.getElementById("result").innerHTML = "Paper YOU WIN!";
+            score++;
+            document.getElementById("score").innerHTML = score;
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Scissors DRAW!";
+            document.getElementById("score").innerHTML = score;
+        }
+
+    });
+
+</script>
+</body>
+</head>
+</html>
