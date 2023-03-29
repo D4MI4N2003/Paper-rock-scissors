@@ -18,6 +18,7 @@
 <div id="results">
     <p id="result"></p>
 </div>
+<footer>&copy 2023<br> D4MI4N2003</footer>
 <script>
     const rockbtn = document.getElementById("rock");
     const paperbtn = document.querySelector("#paper");
@@ -29,19 +30,19 @@
         var a = Math.floor(Math.random() * 3);
         if(a==1)
         {
-            document.getElementById("result").innerHTML = "Rock DRAW!";
+            document.getElementById("result").innerHTML = '<img src="images/rock.png" class="ires"><br>DRAW!';
             document.getElementById("score").innerHTML=score;
         }
         else if(a==2)
         {
-            document.getElementById("result").innerHTML = "Paper YOU LOSE!";
+            document.getElementById("result").innerHTML = '<img src="images/paper.png" class="ires"><br>YOU LOSE!';
             if(score>0)
             score=score-1;
             document.getElementById("score").innerHTML = score;
         }
         else
         {
-            document.getElementById("result").innerHTML = "Scissors YOU WIN!";
+            document.getElementById("result").innerHTML = '<img src="images/scissors.png" class="ires"><br> YOU WIN!';
             score++;
             document.getElementById("score").innerHTML=score;
         }
@@ -51,18 +52,18 @@
         var b = Math.floor(Math.random() * 3);
         if(b==1)
         {
-            document.getElementById("result").innerHTML = "Rock YOU WIN!";
+            document.getElementById("result").innerHTML = '<img src="images/rock.png" class="ires"><br> YOU WIN!';
             score++;
             document.getElementById("score").innerHTML=score;
         }
         else if(b==2)
         {
-            document.getElementById("result").innerHTML = "Paper DRAW!";
+            document.getElementById("result").innerHTML = '<img src="images/paper.png" class="ires"><br> DRAW!';
             document.getElementById("score").innerHTML = score;
         }
         else
         {
-            document.getElementById("result").innerHTML = "Scissors YOU LOSE!";
+            document.getElementById("result").innerHTML = '<img src="images/scissors.png" class="ires"><br> YOU LOSE!';
             if(score>0)
             score=score-1;
             document.getElementById("score").innerHTML = score;
@@ -74,24 +75,25 @@
         var c = Math.floor(Math.random() * 3);
         if(c==1)
         {
-            document.getElementById("result").innerHTML = "Rock YOU LOSE!";
+            document.getElementById("result").innerHTML = '<img src="images/rock.png" class="ires"><br> YOU LOSE!';
             if(score>0)
             score=score-1;
             document.getElementById("score").innerHTML = score;
         }
         else if(c==2)
         {
-            document.getElementById("result").innerHTML = "Paper YOU WIN!";
+            document.getElementById("result").innerHTML = '<img src="images/paper.png" class="ires"><br> YOU WIN!';
             score++;
             document.getElementById("score").innerHTML = score;
         }
         else
         {
-            document.getElementById("result").innerHTML = "Scissors DRAW!";
+            document.getElementById("result").innerHTML = '<img src="images/scissors.png" class="ires"><br> DRAW!';
             document.getElementById("score").innerHTML = score;
         }
 
     });
+
 
 </script>
 </body>
